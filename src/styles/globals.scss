@@ -1,0 +1,139 @@
+:root {
+  --c1: #201a55;
+  --c2: #e43f4a;
+  --c3: #fbac18;
+  --c4: #fff4df;
+  --c5: #fefaf0;
+  --c6: #e43f4a00;
+  --f1: "tarif-arabic";
+  --pi: 58px;
+  --pim: 25px;
+  --f1: "Tarif Arabic";
+  --f2: "Nunito Sans";
+}
+img {
+  user-select: none;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--c1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #3d32a1;
+  }
+}
+* {
+  font-family: "Tarif Arabic", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+p {
+  margin: 0;
+}
+input, select {
+  background: none;
+  padding: 20px;
+  outline: none;
+  border: 1px solid #000000;
+  border-radius: 9999px;
+}
+select:not(:-internal-list-box) {
+  background-color: #e43f4a;
+}
+select {
+  position: relative;
+  font-family: var(--f1) !important;  
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    background-color: var(--c5);
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: var(--c1);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #3d32a1;
+    }
+
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+}
+.appContainer {
+  position: absolute;
+  transform-origin: top left;
+  font-family: "Tarif Arabic", sans-serif;
+  background-color: var(--c1);
+  background-image: url("/img/noisyBg.png");
+  width: 1920px;
+  @media (max-width: 820px) {
+    width: 410px;
+  }
+}
+
+.swiper-button-next {
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  left: 117px !important;
+  background-color: var(--c5);
+  @media (max-width:820px) {
+    display: none !important;
+    }
+  &:after {
+    margin-left: -10px;
+    width: 25px !important;
+    color: black;
+    stroke-linecap: butt !important;
+    stroke-dasharray: 0 !important;
+    stroke-width: 10px !important;
+    font-weight: 900;
+    stroke: black;
+    font-size: 32px !important;
+  }
+  
+}
+
+.swiper-button-prev {
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  right: 117px !important;
+  background-color: var(--c5);
+  @media (max-width:820px) {
+    display: none !important;
+    }
+  &:after {
+    margin-left: -3px;
+    width: 25px !important;
+    color: black;
+    stroke-linecap: butt !important;
+    stroke-dasharray: 0 !important;
+    stroke-width: 10px !important;
+    font-weight: 900;
+    stroke: black;
+    font-size: 32px !important;
+  }
+  
+}

@@ -1,0 +1,19 @@
+.main {
+  .productsContainer {
+    width: 100%;
+    background-color: var(--c5);
+    background-image: url("/img/noisyBg.png");
+    padding-bottom: 200px;
+    margin-top: 60px;
+    .products {
+      .noProducts{
+        padding-top: 200px;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--c2);
+      }
+    }
+  }
+}

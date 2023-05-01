@@ -1,0 +1,188 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .imageAndDetails {
+    background-color: var(--c5);
+    background-image: url("/img/noisyBg.png");
+    margin-inline-start: var(--pi);
+    border-radius: 0px 220px 0px 0px;
+    display: flex;
+    margin-top: 100px;
+    padding: 40px;
+    width: calc(100% - var(--pi) - 80px);
+    z-index: 1;
+    @media (max-width:820px) {
+      flex-direction: column-reverse;
+      margin: 0;
+      padding: 0 var(--pim);
+      border-radius: 0;
+      width: calc(100% - (var(--pim) * 2));
+
+    }
+    .imageContainer {
+      width: 815px;
+      height: 759px;
+      margin-inline-end: 84px;
+      @media (max-width:820px) {
+       width: 370px;
+       height: 350px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 190px;
+        @media (max-width:820px) {
+        border-radius: 50px;
+        }
+      }
+    }
+    .details {
+      padding-block: 92px;
+      .name {
+        font-size: 44px;
+        font-weight: 500;
+        @media (max-width:820px) {
+         font-size: 32px;
+        }
+      }
+      .tags {
+        display: flex;
+        margin-block: 40px;
+        .tag {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-inline-end: 30px;
+          .tagImageContainer {
+            margin-bottom: 5px;
+            img {
+              height: 40px;
+            }
+          }
+          .tagName {
+            font-size: 13px;
+            font-weight: 500;
+          }
+        }
+      }
+      .sizeAndCount {
+        display: flex;
+        .size {
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-inline-end: 40px;
+          .sizeTitle {
+            font-size: 22px;
+            font-weight: 500;
+            margin-inline-end: 20px;
+          }
+          select {
+            padding: 8px 15px 8px 30px;
+            font-weight: 600;
+          }
+          &:after {
+            content: "<";
+            font: 17px "Consolas", monospace;
+            font-weight: 900;
+            color: #333;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            left: 12px;
+            bottom: 5px;
+            padding: 0 0 2px;
+            position: absolute;
+            pointer-events: none;
+          }
+        }
+        .count {
+          display: flex;
+          align-items: center;
+          font-size: 18px;
+          font-weight: 700;
+          img {
+            user-select: none;
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+          }
+          .number {
+            margin-inline: 10px;
+          }
+        }
+      }
+      .price {
+        margin-block: 32px 41px;
+        color: var(--c3);
+        font-size: 22px;
+        font-weight: 600;
+        &::after {
+          content: " ج.م.‏";
+        }
+      }
+      .addtoCart {
+        position: relative;
+        text-align: center;
+        border: 2px solid #000000;
+        border-radius: 40px;
+        padding: 20px 80px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: var(--c5);
+        .icon {
+          position: absolute;
+          bottom: 25%;
+          left: 13%;
+          translate: -50% -25%;
+          height: 22px;
+          width: 25px;
+          border-radius: 0;
+        }
+      }
+      .descTitle{
+        margin-top: 40px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .desc{
+        margin-top: 10px;
+        max-width: 744px;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: -0.79px;
+
+      }
+    }
+  }
+  .suggestedProducts {
+    padding-inline: 0;
+    width: 100%;
+    margin-top: -360px;
+    padding-block: 508px 200px;
+    background-color: var(--c5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/img/noisyBg.png");
+    .title {
+      margin-bottom:  370px;
+      font-size: 28px;
+      font-weight: 600;
+      width: fit-content;
+      padding-inline: 20px;
+      padding-bottom: 20px;
+      background-image: url("/img/titleBg.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+    @media (max-width:820px) {
+      margin-bottom:  0px;
+    }
+    }
+  }
+}

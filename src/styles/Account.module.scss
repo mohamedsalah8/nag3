@@ -1,0 +1,355 @@
+.account {
+  width: 1920px;
+  transform-origin: top left;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: var(--c5);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s;
+  overflow-y: auto;
+  z-index: 100;
+  @media (max-width: 820px) {
+    width: 420px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .header {
+    position: relative;
+    margin-top: 5px;
+    padding-inline: var(--pi);
+    padding-block: 88px 60px;
+    background-image: url("/img/pattern1.png");
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:820px) {
+      padding-inline: var(--pim);
+      padding-top: 50px;
+    }
+    .start {
+      display: flex;
+      align-items: center;
+      @media (max-width: 820px) {
+        margin-block: 30px;
+        align-items: flex-end;
+        button {
+          width: 30px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .title {
+        margin-inline-start: 48px;
+        font-size: 44px;
+        font-weight: 500;
+        @media (max-width: 820px) {
+          font-size: 32px;
+          margin-inline-start: 14px;
+        }
+      }
+    }
+    .center {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      translate: -50% -50%;
+      transition: all 0.25s;
+      @media (max-width: 820px) {
+        display: none;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .end {
+      justify-content: flex-end;
+      flex: 40%;
+      display: flex;
+      align-items: center;
+      @media (max-width:820px) {
+      align-items: center;
+      }
+      .loginOrOut {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .icons {
+        display: flex;
+        align-items: baseline;
+        .userIcon {
+          cursor: pointer;
+          margin-inline-start: 30px;
+          @media (max-width:820px) {
+          display: none;
+          }
+        }
+      }
+    }
+    .basketCountAndIcon {
+      cursor: pointer;
+      margin-inline-start: 30px;
+      display: flex;
+      align-items: baseline;
+      div {
+        margin-bottom: 5px;
+      }
+      img {
+        margin-inline-start: 2px;
+      }
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .breadcrumb {
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      span {
+        color: var(--c3);
+        margin-inline-start: 8px;
+      }
+    }
+    .tabTitle {
+      margin-top: 80px;
+      display: flex;
+      align-items: center;
+      width: 653px;
+      justify-content: space-between;
+      @media (max-width:820px) {
+        width: 370px;
+      }
+      .title {
+        font-size: 22px;
+        font-weight: 500;
+        width: fit-content;
+        float: inline-start;
+      }
+      .line {
+        background-color: black;
+        height: 2px;
+        opacity: 0.18;
+        width: 70%;
+      }
+    }
+    .tabBtns {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      width: 100%;
+      @media (max-width:820px) {
+        width: 370px;
+      }
+    }
+    .tabBtn,
+    .selectedTabBtn {
+      cursor: pointer;
+      margin-inline: 60px;
+      font-size: 18px;
+      font-weight: 500;
+      @media (max-width:820px) {
+        text-align: center;
+        margin-inline: 10px;
+      }
+    }
+    .selectedTabBtn {
+      font-weight: 700;
+      text-decoration: underline 2px;
+    }
+    .tab1,
+    .tab2,
+    .tab3,
+    .newAddress {
+      margin-block: 80px;
+      .inputAndLabel {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        width: 100%;
+        label {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        input,
+        select {
+          font-family: var(--f2);
+          width: 340px;
+          &[type="password"],
+          &[type="text"] {
+            width: 320px;
+            padding-inline-end: 40px;
+          }
+        }
+        img {
+          cursor: pointer;
+          width: 15px;
+          position: absolute;
+          left: 20px;
+          bottom: 22px;
+        }
+      }
+      & > button {
+        margin-top: 30px;
+        background-color: black;
+        color: var(--c5);
+        width: 100%;
+        padding-block: 20px;
+        border-radius: 40px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .tab2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width:820px) {
+        margin-top: 0;
+      }
+      button {
+        position: relative;
+        width: 360px;
+        img {
+          position: absolute;
+          left: 30px;
+          top: 50%;
+          translate: -50% -50%;
+          width: 11.7px;
+        }
+      }
+      .address {
+        width: 592px;
+        margin-top: 30px;
+        padding: 20px 30px;
+        border: 1px solid #000000;
+        border-radius: 40px;
+        border-radius: 40px;
+        @media (max-width: 820px) {
+          width: calc(410px - var(--pim) - 84px);
+        }
+        .name,
+        .mobile,
+        .email {
+          font-family: var(--f2);
+          font-weight: 700;
+        }
+        .addressDetails {
+          padding-block: 20px;
+          font-weight: 500;
+          color: #8f8f8f;
+          max-width: 50%;
+          @media (max-width: 820px) {
+            max-width: unset;
+          }
+        }
+        .footer {
+          width: 100%;
+          padding-top: 20px;
+          border-top: 1px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .start , .end{
+            display: flex;
+          }
+          [name="defaultAddress"]{
+            cursor: pointer;
+            height: 22px;
+            width: 22px;
+            margin-inline-end: 8px;
+          }
+        button {
+          font-weight: 500;
+          margin-inline-start: 30px;
+          width: fit-content;
+          padding-inline-end: 10px;
+          text-decoration: underline 2px;
+          img {
+            position: absolute;
+            left: 0;
+            height: 15px;
+            margin-inline-start: 8px;
+          }
+        }
+        }
+      }
+    }
+    .newAddress {
+      width: 653px;
+      @media (max-width:820px) {
+        width: 370px;
+      }
+      .selectAndLabel {
+        position: relative;
+        width: 100%;
+        select {
+          width: 100%;
+        }
+        &:after {
+          content: "<";
+          font: 20px "Consolas", monospace;
+          font-weight: 900;
+          color: #333;
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+          left: 21px;
+          bottom: 15px;
+          padding: 0 0 2px;
+          position: absolute;
+          pointer-events: none;
+        }
+      }
+      .inputAndLabel {
+        font-family: var(--f1);
+        width: 100%;
+        input {
+          width: 94%;
+          font-family: var(--f1);
+          @media (max-width:820px) {
+            width: 90%;
+          }
+        }
+      }
+      .saveContainer {
+        margin-top: 10px;
+        margin-inline-end: -10px;
+        display: flex;
+        justify-content: flex-end;
+        button {
+          width: 47%;
+          background-color: black;
+          color: var(--c5);
+          padding-block: 20px;
+          border-radius: 40px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+    .buildingAndFloor {
+      display: flex;
+      justify-content: space-between;
+      width: 97%;
+      @media (max-width:820px) {
+        width: 94%;
+      }
+      .building_number,
+      .floor_number {
+        width: 45%;
+        @media (max-width:820px) {
+          width: 44%;
+        }
+      }
+    }
+  }
+}

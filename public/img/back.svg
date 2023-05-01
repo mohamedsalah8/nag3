@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Group_62" data-name="Group 62" transform="translate(-1818 -91)">
+    <g id="Group_72" data-name="Group 72" transform="translate(-1 1)">
+      <g id="Rectangle_31" data-name="Rectangle 31" transform="translate(1819 90)" fill="none" stroke="#000" stroke-width="2">
+        <rect width="44" height="44" rx="22" stroke="none"/>
+        <rect x="1" y="1" width="42" height="42" rx="21" fill="none"/>
+      </g>
+      <path id="Icon_material-arrow-forward" data-name="Icon material-arrow-forward" d="M16.233,6l-1.8,1.8,7.137,7.15H6v2.558H21.566l-7.137,7.15,1.8,1.8L26.465,16.233Z" transform="translate(1825.279 96.279)"/>
+    </g>
+  </g>
+</svg>
